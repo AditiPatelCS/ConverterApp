@@ -1,0 +1,72 @@
+a{
+    text-decoration: none;
+    color: black;
+    /* margin-right: 2em;
+    margin-bottom: 4em; */
+}
+/* td{
+    /* padding-bottom: 1em; */
+    /* padding-right: 1.7em;
+} */
+/* change back table to display none */
+ul{
+    display: none; 
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0;
+    
+}
+.ulList{
+    display:block;
+    border:0em;
+}
+
+/* .hide{
+    display:none;
+} */
+.show{
+    display: block;
+}
+ul > li> ul{
+    width: 8em;
+    align-self: center;
+    /* width:auto; */
+    /* padding: 1em; */
+}
+.wrapper{
+    display: flex;
+    /* grid-auto-flow: dense; */
+}
+#sideMenu{
+    flex: 1;
+    width:auto;
+    grid-auto-rows: auto;
+    /* box-sizing: border-box; */
+    /* float: left; */
+}
+.wrapper2{
+    flex:2;
+    /* position:fixed or abs; */
+   
+    /* overflow: hidden; */
+    /* float: right; */
+}
+#beginScreen{
+    display: block;
+}
+#wrapper3{
+    display: none;
+}
+/* #input{
+    border: 1px solid black;
+    padding: auto;
+} */
+p{
+    align-self: center;
+}
+.searchBar{
+    width: 70%;
+    font-size: 18px;
+    padding: 11px;
+    border:1px solid #ddd;
+}

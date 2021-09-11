@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Converter App</title>
+</head>
+
+<body>
+    <h1 id="name"><a href="#">All in One Converter</a></h1>
+    <div class="wrapper">
+        <div id="sideMenu">
+            <h2>Options</h2>
+            <div>
+                <a href="javascript:void(0);" id="lengthTitle">
+                    <h3>Length &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="length">
+                        <!-- <input type="text" class="searchBar" placeholder="Search a length">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg> -->
+                        <li><a href="javascript:void(0);" id="cmTitle">
+                                <h4>Centimeter(cm) &#x25BE;</h4>
+                            </a>
+                            <ul id="cm">
+                                <li><a href="javascript:void(0);" class="cmTom">cm to m</a></li>
+                                <li><a href="javascript:void(0);" class="cmTokm">cm to km</a></li>
+                                <li><a href="javascript:void(0);" class="cmToft">cm to ft</a></li>
+                                <li><a href="javascript:void(0);" class="cmToin">cm to in</a></li>
+                                <li><a href="javascript:void(0);" class="cmToyd">cm to yd</a></li>
+                                <li><a href="javascript:void(0);" class="cmTomi">cm to mi</a></li>
+                                <li><a href="javascript:void(0);" class="cmTomm">cm to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="mTitle">
+                                <h4>Meter(m) &#x25BE;</h4>
+                            </a>
+                            <ul id="m">
+                                <li><a href="javascript:void(0);" class="mTocm">m to cm</a></li>
+                                <li><a href="javascript:void(0);" class="mTokm">m to km</a></li>
+                                <li><a href="javascript:void(0);" class="mToft">m to ft</a></li>
+                                <li><a href="javascript:void(0);" class="mToin">m to in</a></li>
+                                <li><a href="javascript:void(0);" class="mToyd">m to yd</a></li>
+                                <li><a href="javascript:void(0);" class="mTomi">m to mi</a></li>
+                                <li><a href="javascript:void(0);" class="mTomm">m to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kmTitle">
+                                <h4>Kilometer(km) &#x25BE;</h4>
+                            </a>
+                            <ul id="km">
+                                <li><a href="javascript:void(0);" class="kmTocm">km to cm</a></li>
+                                <li><a href="javascript:void(0);" class="kmTom">km to m</a></li>
+                                <li><a href="javascript:void(0);" class="kmToft">km to ft</a></li>
+                                <li><a href="javascript:void(0);" class="kmToin">km to in</a></li>
+                                <li><a href="javascript:void(0);" class="kmToyd">km to yd</a></li>
+                                <li><a href="javascript:void(0);" class="kmTomi">km to mi</a></li>
+                                <li><a href="javascript:void(0);" class="kmTomm">km to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ftTitle">
+                                <h4>Feet(ft) &#x25BE;</h4>
+                            </a>
+                            <ul id="ft">
+                                <li><a href="javascript:void(0);" class="ftTocm">ft to cm</a></li>
+                                <li><a href="javascript:void(0);" class="ftTom">ft to m</a></li>
+                                <li><a href="javascript:void(0);" class="ftTokm">ft to km</a></li>
+                                <li><a href="javascript:void(0);" class="ftToin">ft to in</a></li>
+                                <li><a href="javascript:void(0);" class="ftToyd">ft to yd</a></li>
+                                <li><a href="javascript:void(0);" class="ftTomi">ft to mi</a></li>
+                                <li><a href="javascript:void(0);" class="ftTomm">ft to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="inTitle">
+                                <h4>Inch(in) &#x25BE;</h4>
+                            </a>
+                            <ul id="in">
+                                <li><a href="javascript:void(0);" class="inTocm">in to cm</a></li>
+                                <li><a href="javascript:void(0);" class="inTom">in to m</a></li>
+                                <li><a href="javascript:void(0);" class="inTokm">in to km</a></li>
+                                <li><a href="javascript:void(0);" class="inToft">in to ft</a></li>
+                                <li><a href="javascript:void(0);" class="inToyd">in to yd</a></li>
+                                <li><a href="javascript:void(0);" class="inTomi">in to mi</a></li>
+                                <li><a href="javascript:void(0);" class="inTomm">in to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ydTitle">
+                                <h4>Yard(yd) &#x25BE;</h4>
+                            </a>
+                            <ul id="yd">
+                                <li><a href="javascript:void(0);" class="ydTocm">yd to cm</a></li>
+                                <li><a href="javascript:void(0);" class="ydTom">yd to m</a></li>
+                                <li><a href="javascript:void(0);" class="ydTokm">yd to km</a></li>
+                                <li><a href="javascript:void(0);" class="ydToft">yd to ft</a></li>
+                                <li><a href="javascript:void(0);" class="ydToin">yd to in</a></li>
+                                <li><a href="javascript:void(0);" class="ydTomi">yd to mi</a></li>
+                                <li><a href="javascript:void(0);" class="ydTomm">yd to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="miTitle">
+                                <h4>Mile(mi) &#x25BE;</h4>
+                            </a>
+                            <ul id="mi">
+                                <li><a href="javascript:void(0);" class="miTocm">mi to cm</a></li>
+                                <li><a href="javascript:void(0);" class="miTom">mi to m</a></li>
+                                <li><a href="javascript:void(0);" class="miTokm">mi to km</a></li>
+                                <li><a href="javascript:void(0);" class="miToft">mi to ft</a></li>
+                                <li><a href="javascript:void(0);" class="miToin">mi to in</a></li>
+                                <li><a href="javascript:void(0);" class="miToyd">mi to yd</a></li>
+                                <li><a href="javascript:void(0);" class="miTomm">mi to mm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="mmTitle">
+                                <h4>Millimeter(mm) &#x25BE;</h4>
+                            </a>
+                            <ul id="mm">
+                                <li><a href="javascript:void(0);" class="mmTocm">mm to cm</a></li>
+                                <li><a href="javascript:void(0);" class="mmTom">mm to m</a></li>
+                                <li><a href="javascript:void(0);" class="mmTokm">mm to km</a></li>
+                                <li><a href="javascript:void(0);" class="mmToft">mm to ft</a></li>
+                                <li><a href="javascript:void(0);" class="mmToin">mm to in</a></li>
+                                <li><a href="javascript:void(0);" class="mmToyd">mm to yd</a></li>
+                                <li><a href="javascript:void(0);" class="mmTomi">mm to mi</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- span or a?? span is block(inline-block), hard with setup, remove underline from a-->
+
+
+                <a href="javascript:void(0);" id="weightTitle">
+                    <h3>Weight(Mass) &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="weight">
+
+                        <li><a href="javascript:void(0);" id="mgTitle">
+                                <h4>Milligram(mg) &#x25BE;</h4>
+                            </a>
+                            <ul id="mg">
+                                <li><a href="javascript:void(0);" class="mgTog">mg to g</a></li>
+                                <li><a href="javascript:void(0);" class="mgTokg">mg to kg</a></li>
+                                <li><a href="javascript:void(0);" class="mgTooz">mg to oz</a></li>
+                                <li><a href="javascript:void(0);" class="mgTolb">mg to lb</a></li>
+                                <li><a href="javascript:void(0);" class="mgTost">mg to st</a></li>
+                                <li><a href="javascript:void(0);" class="mgTomt">mg to mt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="gTitle">
+                                <h4>Gram(g) &#x25BE;</h4>
+                            </a>
+                            <ul id="g">
+                                <li><a href="javascript:void(0);" class="gTomg">g to mg</a></li>
+                                <li><a href="javascript:void(0);" class="gTokg">g to kg</a></li>
+                                <li><a href="javascript:void(0);" class="gTooz">g to oz</a></li>
+                                <li><a href="javascript:void(0);" class="gTolb">g to lb</a></li>
+                                <li><a href="javascript:void(0);" class="gTost">g to st</a></li>
+                                <li><a href="javascript:void(0);" class="gTomt">g to mt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kgTitle">
+                                <h4>Kilogram(kg) &#x25BE;</h4>
+                            </a>
+                            <ul id="kg">
+                                <li><a href="javascript:void(0);" class="kgTomg">kg to mg</a></li>
+                                <li><a href="javascript:void(0);" class="kgTog">kg to g</a></li>
+                                <li><a href="javascript:void(0);" class="kgTooz">kg to oz</a></li>
+                                <li><a href="javascript:void(0);" class="kgTolb">kg to lb</a></li>
+                                <li><a href="javascript:void(0);" class="kgTost">kg to st</a></li>
+                                <li><a href="javascript:void(0);" class="kgTomt">kg to mt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="OzTitle">
+                                <h4>Ounce(oz) &#x25BE;</h4>
+                            </a>
+                            <ul id="oz">
+                                <li><a href="javascript:void(0);" class="ozTomg">oz to mg</a></li>
+                                <li><a href="javascript:void(0);" class="ozTog">oz to g</a></li>
+                                <li><a href="javascript:void(0);" class="ozTokg">oz to kg</a></li>
+                                <li><a href="javascript:void(0);" class="ozTolb">oz to lb</a></li>
+                                <li><a href="javascript:void(0);" class="ozTost">oz to st</a></li>
+                                <li><a href="javascript:void(0);" class="ozTomt">oz to mt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="lbTitle">
+                                <h4>Pound(lb) &#x25BE;</h4>
+                            </a>
+                            <ul id="lb">
+                                <li><a href="javascript:void(0);" class="lbTomg">lb to mg</a></li>
+                                <li><a href="javascript:void(0);" class="lbTog">lb to g</a></li>
+                                <li><a href="javascript:void(0);" class="lbTokg">lb to kg</a></li>
+                                <li><a href="javascript:void(0);" class="lbToOz">lb to oz</a></li>
+                                <li><a href="javascript:void(0);" class="lbTost">lb to st</a></li>
+                                <li><a href="javascript:void(0);" class="lbTomt">lb to mt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="stTitle">
+                                <h4>Stone(st) &#x25BE;</h4>
+                            </a>
+                            <ul id="st">
+                                <li><a href="javascript:void(0);" class="stTomg">st to mg</a></li>
+                                <li><a href="javascript:void(0);" class="stTog">st to g</a></li>
+                                <li><a href="javascript:void(0);" class="stTokg">st to kg</a></li>
+                                <li><a href="javascript:void(0);" class="stToOz">st to oz</a></li>
+                                <li><a href="javascript:void(0);" class="stTolb">st to lb</a></li>
+                                <li><a href="javascript:void(0);" class="stTomt">st to mt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="mtTitle">
+                                <h4>Metric Ton(mt) &#x25BE;</h4>
+                            </a>
+                            <ul id="mt">
+                                <li><a href="javascript:void(0);" class="mtTomg">mt to mg</a></li>
+                                <li><a href="javascript:void(0);" class="mtTog">mt to g</a></li>
+                                <li><a href="javascript:void(0);" class="mtTokg">mt to kg</a></li>
+                                <li><a href="javascript:void(0);" class="mtToOz">mt to oz</a></li>
+                                <li><a href="javascript:void(0);" class="mtTolb">mt to lb</a></li>
+                                <li><a href="javascript:void(0);" class="mtTost">mt to st</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="timeTitle">
+                    <h3>Time &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="time">
+
+                        <li><a href="javascript:void(0);" id="sTitle">
+                                <h4>Second(s) &#x25BE;</h4>
+                                </h4>
+                            </a>
+                            <ul id="s">
+                                <li><a href="javascript:void(0);" class="sTomin">s to min</a></li>
+                                <li><a href="javascript:void(0);" class="sTohr">s to hr</a></li>
+                                <li><a href="javascript:void(0);" class="sToday">s to day</a></li>
+                                <li><a href="javascript:void(0);" class="sTowk">s to wk</a></li>
+                                <li><a href="javascript:void(0);" class="sTomonth">s to month</a></li>
+                                <li><a href="javascript:void(0);" class="sToyr">s to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="minTitle">
+                                <h4>Minute(min) &#x25BE;</h4>
+                            </a>
+                            <ul id="min">
+                                <li><a href="javascript:void(0);" class="minTos">min to s</a></li>
+                                <li><a href="javascript:void(0);" class="minTohr">min to hr</a></li>
+                                <li><a href="javascript:void(0);" class="minToday">min to day</a></li>
+                                <li><a href="javascript:void(0);" class="minTowk">min to wk</a></li>
+                                <li><a href="javascript:void(0);" class="minTomonth">min to month</a></li>
+                                <li><a href="javascript:void(0);" class="minToyr">min to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="hrTitle">
+                                <h4>Hour(hr) &#x25BE;</h4>
+                            </a>
+                            <ul id="hr">
+                                <li><a href="javascript:void(0);" class="hrTos">hr to s</a></li>
+                                <li><a href="javascript:void(0);" class="hrTomin">hr to min</a></li>
+                                <li><a href="javascript:void(0);" class="hrToday">hr to day</a></li>
+                                <li><a href="javascript:void(0);" class="hrTowk">hr to wk</a></li>
+                                <li><a href="javascript:void(0);" class="hrTomonth">hr to month</a></li>
+                                <li><a href="javascript:void(0);" class="hrToyr">hr to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="dayTitle">
+                                <h4>Day &#x25BE;</h4>
+                            </a>
+                            <ul id="day">
+                                <li><a href="javascript:void(0);" class="dayTos">day to s</a></li>
+                                <li><a href="javascript:void(0);" class="dayTomin">day to min</a></li>
+                                <li><a href="javascript:void(0);" class="dayTohr">day to hr</a></li>
+                                <li><a href="javascript:void(0);" class="dayTowk">day to wk</a></li>
+                                <li><a href="javascript:void(0);" class="dayTomonth">day to month</a></li>
+                                <li><a href="javascript:void(0);" class="dayToyr">day to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="wkTitle">
+                                <h4>Week(wk) &#x25BE;</h4>
+                            </a>
+                            <ul id="wk">
+                                <li><a href="javascript:void(0);" class="wkTos">wk to s</a></li>
+                                <li><a href="javascript:void(0);" class="wkTomin">wk to min</a></li>
+                                <li><a href="javascript:void(0);" class="wkTohr">wk to hr</a></li>
+                                <li><a href="javascript:void(0);" class="wkToday">wk to day</a></li>
+                                <li><a href="javascript:void(0);" class="wkTomonth">wk to month</a></li>
+                                <li><a href="javascript:void(0);" class="wkToyr">wk to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="monthTitle">
+                                <h4>Month &#x25BE;</h4>
+                            </a>
+                            <ul id="month">
+                                <li><a href="javascript:void(0);" class="monthTos">month to s</a></li>
+                                <li><a href="javascript:void(0);" class="monthTomin">month to min</a></li>
+                                <li><a href="javascript:void(0);" class="monthTohr">month to hr</a></li>
+                                <li><a href="javascript:void(0);" class="monthToday">month to day</a></li>
+                                <li><a href="javascript:void(0);" class="monthTowk">month to wk</a></li>
+                                <li><a href="javascript:void(0);" class="monthToyr">month to yr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="yrTitle">
+                                <h4>Year(yr) &#x25BE;</h4>
+                            </a>
+                            <ul id="yr">
+                                <li><a href="javascript:void(0);" class="yrTos">yr to s</a></li>
+                                <li><a href="javascript:void(0);" class="yrTomin">yr to min</a></li>
+                                <li><a href="javascript:void(0);" class="yrTohr">yr to hr</a></li>
+                                <li><a href="javascript:void(0);" class="yrToday">yrto day</a></li>
+                                <li><a href="javascript:void(0);" class="yrTowk">yr to wk</a></li>
+                                <li><a href="javascript:void(0);" class="yrTomonth">yr to month</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" id="areaTitle">
+                    <h3>Area &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="area">
+
+                        <li><a href="javascript:void(0);" id="sqInTitle">
+                                <h4>Sqaure Inch(sq in) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqIn">
+                                <li><a href="javascript:void(0);" class="sqInTosqFt">sq in to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="sqInTosqYd">sq in to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="sqInTosqM">sq in to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="sqInTosqKm">sq in to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="sqInTosqMi">sq in to sq mi</a></li>
+                                <li><a href="javascript:void(0);" class="sqInToac">sq in to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="sqFtTitle">
+                                <h4>Square Foot(sq ft) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqFt">
+                                <li><a href="javascript:void(0);" class="sqFtTosqIn">sq ft to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="sqFtTosqYd">sq ft to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="sqFtTosqM">sq ft to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="sqFtTosqKm">sq ft to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="sqFtTosqMi">sq ft to sq mi</a></li>
+                                <li><a href="javascript:void(0);" class="sqFtToac">sq ft to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="sqYdTitle">
+                                <h4>Sqaure Yard(sq yd) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqYd">
+                                <li><a href="javascript:void(0);" class="sqYdTosqIn">sq yd to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="sqYdTosqFt">sq yd to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="sqYdTosqM">sq yd to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="sqYdTosqKm">sq yd to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="sqYdTosqMi">sq yd to sq mi</a></li>
+                                <li><a href="javascript:void(0);" class="sqYdToac">sq yd to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="sqMTitle">
+                                <h4>Square Meter(sq m) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqM">
+                                <li><a href="javascript:void(0);" class="sqMTosqIn">sq m to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="sqMTosqFt">sq m to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="sqMTosqYd">sq m to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="sqMTosqKm">sq m to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="sqMTosqMi">sq m to sq mi</a></li>
+                                <li><a href="javascript:void(0);" class="sqMToac">sq m to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="sqKmTitle">
+                                <h4>Sqaure Kilometer(sq km) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqKm">
+                                <li><a href="javascript:void(0);" class="sqKmTosqIn">sq km to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="sqKmTosqFt">sq km to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="sqKmTosqYd">sq km to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="sqKmTosqM">sq km to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="sqKmTosqMi">sq km to sq mi</a></li>
+                                <li><a href="javascript:void(0);" class="sqKmToac">sq km to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="sqMiTitle">
+                                <h4>Square Mile(sq mi) &#x25BE;</h4>
+                            </a>
+                            <ul id="sqMi">
+                                <li><a href="javascript:void(0);" class="sqMiTosqIn">sq mi to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="sqMiTosqFt">sq mi to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="sqMiTosqYd">sq mi to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="sqMiTosqM">sq mi to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="sqMiTosqKm">sq mi to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="sqMiToac">sq mi to ac</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="acTitle">
+                                <h4>Acre(ac) &#x25BE;</h4>
+                            </a>
+                            <ul id="ac">
+                                <li><a href="javascript:void(0);" class="acTosqIn">ac to sq in</a></li>
+                                <li><a href="javascript:void(0);" class="acTosqFt">ac to sq ft</a></li>
+                                <li><a href="javascript:void(0);" class="acTosqYd">ac to sq yd</a></li>
+                                <li><a href="javascript:void(0);" class="acTosqM">ac to sq m</a></li>
+                                <li><a href="javascript:void(0);" class="acTosqKm">ac to sq km</a></li>
+                                <li><a href="javascript:void(0);" class="acTosqMi">ac to sq mi</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="volumeTitle">
+                    <h3>Volume &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="volume">
+
+                        <li><a href="javascript:void(0);" id="mlTitle">
+                                <h4>Milliliter(ml) &#x25BE;</h4>
+                            </a>
+                            <ul id="ml">
+                                <li><a href="javascript:void(0);" class="mlTol">ml to l</a></li>
+                                <li><a href="javascript:void(0);" class="mlTocuIn">ml to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="mlTocuFt">ml to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="mlTocuM">ml to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="mlTotsp">ml to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="mlTotbsp">ml to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="mlTogal">ml to gal</a></li>
+                                <li><a href="javascript:void(0);" class="mlToqt">ml to qt</a></li>
+                                <li><a href="javascript:void(0);" class="mlTopt">ml to pt</a></li>
+                                <li><a href="javascript:void(0);" class="mlToc">ml to c</a></li>
+                                <li><a href="javascript:void(0);" class="mlToOz">ml to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="lTitle">
+                                <h4>Liter(l) &#x25BE;</h4>
+                            </a>
+                            <ul id="l">
+                                <li><a href="javascript:void(0);" class="lToml">l to ml</a></li>
+                                <li><a href="javascript:void(0);" class="lTocuIn">l to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="lTocuFt">l to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="lTocuM">l to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="lTotsp">l to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="lTotbsp">l to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="lTogal">l to gal</a></li>
+                                <li><a href="javascript:void(0);" class="lToqt">l to qt</a></li>
+                                <li><a href="javascript:void(0);" class="lTopt">l to pt</a></li>
+                                <li><a href="javascript:void(0);" class="lToc">l to c</a></li>
+                                <li><a href="javascript:void(0);" class="lToOz">l to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="cuInTitle">
+                                <h4>Cubic Inch(cu in) &#x25BE;</h4>
+                            </a>
+                            <ul id="cuIn">
+                                <li><a href="javascript:void(0);" class="cuInToml">cu in to ml</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTol">cu in to l</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTocuFt">cu in to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTocuM">cu in to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTotsp">cu in to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTotbsp">cu in to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTogal">cu in to gal</a></li>
+                                <li><a href="javascript:void(0);" class="cuInToqt">cu in to qt</a></li>
+                                <li><a href="javascript:void(0);" class="cuInTopt">cu in to pt</a></li>
+                                <li><a href="javascript:void(0);" class="cuInToc">cu in to c</a></li>
+                                <li><a href="javascript:void(0);" class="cuInToOz">cu in to oz</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="cuFtTitle">
+                                <h4>Cubic Foot(cu ft) &#x25BE;</h4>
+                            </a>
+                            <ul id="cuFt">
+                                <li><a href="javascript:void(0);" class="cuFtToml">cu ft to ml</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTol">cu ft to l</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTocuIn">cu ft to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTocuM">cu ft to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTotsp">cu ft to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTotbsp">cu ft to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTogal">cu ft to gal</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtToqt">cu ft to qt</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtTopt">cu ft to pt</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtToc">cu ft to c</a></li>
+                                <li><a href="javascript:void(0);" class="cuFtToOz">cu ft to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="cuMTitle">
+                                <h4>Cubic Meter(cu m) &#x25BE;</h4>
+                            </a>
+                            <ul id="cuM">
+                                <li><a href="javascript:void(0);" class="cuMToml">cu m to ml</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTol">cu m to l</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTocuIn">cu m to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTocuFt">cu m to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTotsp">cu m to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTotbsp">cu m to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTogal">cu m to gal</a></li>
+                                <li><a href="javascript:void(0);" class="cuMToqt">cu m to qt</a></li>
+                                <li><a href="javascript:void(0);" class="cuMTopt">cu m to pt</a></li>
+                                <li><a href="javascript:void(0);" class="cuMToc">cu m to c</a></li>
+                                <li><a href="javascript:void(0);" class="cuMToOz">cu m to oz</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="tspTitle">
+                                <h4>Teaspoon(tsp) &#x25BE;</h4>
+                            </a>
+                            <ul id="tsp">
+                                <li><a href="javascript:void(0);" class="tspToml">tsp to ml</a></li>
+                                <li><a href="javascript:void(0);" class="tspTol">tsp to l</a></li>
+                                <li><a href="javascript:void(0);" class="tspTocuIn">tsp to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="tspTocuFt">tsp to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="tspTocuM">tsp to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="tspTotbsp">tsp to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="tspTogal">tsp to gal</a></li>
+                                <li><a href="javascript:void(0);" class="tspToqt">tsp to qt</a></li>
+                                <li><a href="javascript:void(0);" class="tspTopt">tsp to pt</a></li>
+                                <li><a href="javascript:void(0);" class="tspToc">tsp to c</a></li>
+                                <li><a href="javascript:void(0);" class="tspToOz">tsp to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="tbspTitle">
+                                <h4>Tablespoon(tbsp) &#x25BE;</h4>
+                            </a>
+                            <ul id="tbsp">
+                                <li><a href="javascript:void(0);" class="tbspToml">tbsp to ml</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTol">tbsp to l</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTocuIn">tbsp to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTocuFt">tbsp to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTocuM">tbsp to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTotsp">tbsp to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTogal">tbsp to gal</a></li>
+                                <li><a href="javascript:void(0);" class="tbspToqt">tbsp to qt</a></li>
+                                <li><a href="javascript:void(0);" class="tbspTopt">tbsp to pt</a></li>
+                                <li><a href="javascript:void(0);" class="tbspToc">tbsp to c</a></li>
+                                <li><a href="javascript:void(0);" class="tbspToOz">tbsp to oz</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="galTitle">
+                                <h4>Gallon(gal) &#x25BE;</h4>
+                            </a>
+                            <ul id="gal">
+                                <li><a href="javascript:void(0);" class="galToml">gal to ml</a></li>
+                                <li><a href="javascript:void(0);" class="galTol">gal to l</a></li>
+                                <li><a href="javascript:void(0);" class="galTocuIn">gal to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="galTocuFt">gal to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="galTocuM">gal to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="galTotsp">gal to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="galTotbsp">gal to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="galToqt">gal to qt</a></li>
+                                <li><a href="javascript:void(0);" class="galTopt">gal to pt</a></li>
+                                <li><a href="javascript:void(0);" class="galToc">gal to c</a></li>
+                                <li><a href="javascript:void(0);" class="galToOz">gal to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="qtTitle">
+                                <h4>US Quart(qt) &#x25BE;</h4>
+                            </a>
+                            <ul id="qt">
+                                <li><a href="javascript:void(0);" class="qtToml">qt to ml</a></li>
+                                <li><a href="javascript:void(0);" class="qtTol">qt to l</a></li>
+                                <li><a href="javascript:void(0);" class="qtTocuIn">qt to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="qtTocuFt">qt to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="qtTocuM">qt to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="qtTotsp">qt to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="qtTotbsp">qt to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="qtTogal">qt to gal</a></li>
+                                <li><a href="javascript:void(0);" class="qtTopt">qt to pt</a></li>
+                                <li><a href="javascript:void(0);" class="qtToc">qt to c</a></li>
+                                <li><a href="javascript:void(0);" class="qtToOz">qt to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ptTitle">
+                                <h4>US Pint(pt) &#x25BE;</h4>
+                            </a>
+                            <ul id="pt">
+                                <li><a href="javascript:void(0);" class="ptToml">pt to ml</a></li>
+                                <li><a href="javascript:void(0);" class="ptTol">pt to l</a></li>
+                                <li><a href="javascript:void(0);" class="ptTocuIn">pt to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="ptTocuFt">pt to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="ptTocuM">pt to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="ptTotsp">pt to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="ptTotbsp">pt to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="ptTogal">pt to gal</a></li>
+                                <li><a href="javascript:void(0);" class="ptToqt">pt to qt</a></li>
+                                <li><a href="javascript:void(0);" class="ptToc">pt to c</a></li>
+                                <li><a href="javascript:void(0);" class="ptToOz">pt to oz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="cTitle">
+                                <h4>US Legal Cup(c) &#x25BE;</h4>
+                            </a>
+                            <ul id="c">
+                                <li><a href="javascript:void(0);" class="cToml">c to ml</a></li>
+                                <li><a href="javascript:void(0);" class="cTol">c to l</a></li>
+                                <li><a href="javascript:void(0);" class="cTocuIn">c to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="cTocuFt">c to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="cTocuM">c to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="cTotsp">c to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="cTotbsp">c to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="cTogal">c to gal</a></li>
+                                <li><a href="javascript:void(0);" class="cToqt">c to qt</a></li>
+                                <li><a href="javascript:void(0);" class="cTopt">c to pt</a></li>
+                                <li><a href="javascript:void(0);" class="cToOz">c to oz</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ozTitle">
+                                <h4>Ounce(oz) &#x25BE;</h4>
+                            </a>
+                            <ul id="Oz">
+                                <li><a href="javascript:void(0);" class="OzToml">oz to ml</a></li>
+                                <li><a href="javascript:void(0);" class="OzTol">oz to l</a></li>
+                                <li><a href="javascript:void(0);" class="OzTocuIn">oz to cu in</a></li>
+                                <li><a href="javascript:void(0);" class="OzTocuFt">oz to cu ft</a></li>
+                                <li><a href="javascript:void(0);" class="OzTocuM">oz to cu m</a></li>
+                                <li><a href="javascript:void(0);" class="OzTotsp">oz to tsp</a></li>
+                                <li><a href="javascript:void(0);" class="OzTotbsp">oz to tbsp</a></li>
+                                <li><a href="javascript:void(0);" class="OzTogal">oz to gal</a></li>
+                                <li><a href="javascript:void(0);" class="OzToqt">oz to qt</a></li>
+                                <li><a href="javascript:void(0);" class="OzTopt">oz to pt</a></li>
+                                <li><a href="javascript:void(0);" class="OzToc">oz to c</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="temperatureTitle">
+                    <h3>Temperature &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="temperature">
+
+                        <li><a href="javascript:void(0);" id="CTitle">
+                                <h4>Celsius(&#8451;) &#x25BE;</h4>
+                            </a>
+                            <ul id="C">
+                                <li><a href="javascript:void(0);" class="CToF">&#8451; to &#8457;</a></li>
+                                <li><a href="javascript:void(0);" class="CToK">&#8451; to K</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="fTitle">
+                                <h4>Fahrenheit(&#8457;) &#x25BE;</h4>
+                            </a>
+                            <ul id="F">
+                                <li><a href="javascript:void(0);" class="FToC">&#8457; to &#8451;</a></li>
+                                <li><a href="javascript:void(0);" class="FToK">&#8457; to K</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kTitle">
+                                <h4>Kelvin(K) &#x25BE;</h4>
+                            </a>
+                            <ul id="K">
+                                <li><a href="javascript:void(0);" class="KToC">K to &#8451;</a></li>
+                                <li><a href="javascript:void(0);" class="KToF">K to &#8457;</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="speedTitle">
+                    <h3>Speed &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="speed">
+
+                        <li><a href="javascript:void(0);" id="mpsTitle">
+                                <h4>Meter per second(m/s) &#x25BE;</h4>
+                            </a>
+                            <ul id="mps">
+                                <li><a href="javascript:void(0);" class="mpsToftps">m/s to ft/s</a></li>
+                                <li><a href="javascript:void(0);" class="mpsTokmphr">m/s to km/hr</a></li>
+                                <li><a href="javascript:void(0);" class="mpsTomiphr">m/s to mi/hr</a></li>
+                                <li><a href="javascript:void(0);" class="mpsTokt">m/s to kt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="ftpsTitle">
+                                <h4>Feet per second(ft/s) &#x25BE;</h4>
+                            </a>
+                            <ul id="ftps">
+
+                                <li><a href="javascript:void(0);" class="ftpsTomps">ft/s to m/s</a></li>
+                                <li><a href="javascript:void(0);" class="ftpsTokmphr">ft/s to km/hr</a></li>
+                                <li><a href="javascript:void(0);" class="ftpsTomiphr">ft/s to mi/hr</a></li>
+                                <li><a href="javascript:void(0);" class="ftpsTokt">ft/s to kt</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kmphrTitle">
+                                <h4>Kilometer per hour(km/hr) &#x25BE;</h4>
+                            </a>
+                            <ul id="kmphr">
+                                <li><a href="javascript:void(0);" class="kmphrTomps">km/hr to m/s</a></li>
+                                <li><a href="javascript:void(0);" class="kmphrToftps">km/hr to ft/s</a></li>
+                                <li><a href="javascript:void(0);" class="kmphrTomiphr">km/hr to mi/hr</a></li>
+                                <li><a href="javascript:void(0);" class="kmphrTokt">km/hr to kt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="miphrTitle">
+                                <h4>Miles per hour(mi/hr) &#x25BE;</h4>
+                            </a>
+                            <ul id="miphr">
+                                <li><a href="javascript:void(0);" class="miphrTomps">mi/hr to m/s</a></li>
+                                <li><a href="javascript:void(0);" class="miphrToftps">mi/hr to ft/s</a></li>
+                                <li><a href="javascript:void(0);" class="miphrTokmphr">mi/hr to km/hr</a></li>
+                                <li><a href="javascript:void(0);" class="miphrTokt">mi/hr to kt</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ktTitle">
+                                <h4>Knot(kt) &#x25BE;</h4>
+                            </a>
+                            <ul id="kt">
+                                <li><a href="javascript:void(0);" class="ktTomps">kt to m/s</a></li>
+                                <li><a href="javascript:void(0);" class="ktToftps">kt to ft/s</a></li>
+                                <li><a href="javascript:void(0);" class="ktTokmphr">kt to mi/hr</a></li>
+                                <li><a href="javascript:void(0);" class="ktTomiphr">kt to kt</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" id="angleTitle">
+                    <h3>Angle &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="angle">
+
+                        <li><a href="javascript:void(0);" id="degTitle">
+                                <h4>Degree(&#176;) &#x25BE;</h4>
+                            </a>
+                            <ul id="deg">
+                                <li><a href="javascript:void(0);" class="degTorad">&#176; to rad</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="radTitle">
+                                <h4>Radian(rad) &#x25BE;</h4>
+                            </a>
+                            <ul id="rad">
+                                <li><a href="javascript:void(0);" class="radTodeg">rad to &#176;</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="forceTitle">
+                    <h3>Force &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="force">
+
+                        <li><a href="javascript:void(0);" id="nTitle">
+                                <h4>Newton(N) &#x25BE;</h4>
+                            </a>
+                            <ul id="N">
+                                <li><a href="javascript:void(0);" class="NTokN">N to kN</a></li>
+                                <li><a href="javascript:void(0);" class="NTolbf">N to lbf</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kNTitle">
+                                <h4>Kilonewton(kN) &#x25BE;</h4>
+                            </a>
+                            <ul id="kN">
+                                <li><a href="javascript:void(0);" class="kNToN">kN to N</a></li>
+                                <li><a href="javascript:void(0);" class="kNTolbf">kN to lbf</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="lbfTitle">
+                                <h4>Pound-force(lbf) &#x25BE;</h4>
+                            </a>
+                            <ul id="lbf">
+                                <li><a href="javascript:void(0);" class="lbfToN">lbf to N</a></li>
+                                <li><a href="javascript:void(0);" class="lbfTokN">lbf to kN</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="angularVelocityTitle">
+                    <h3>Angular Velocity &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="angularVelocity">
+
+                        <li><a href="javascript:void(0);" id="radpsTitle">
+                                <h4>Radian per second(rad/s) &#x25BE;</h4>
+                            </a>
+                            <ul id="radps">
+                                <li><a href="javascript:void(0);" class="radpsTodps">rad/s to &#176;/s</a></li>
+                                <li><a href="javascript:void(0);" class="radpsToradpmin">rad/s to rad/min</a></li>
+                                <li><a href="javascript:void(0);" class="radpsTodpmin">rad/s to &#176;/min</a></li>
+                                <li><a href="javascript:void(0);" class="radpsTorps">rad/s to r/s</a></li>
+                                <li><a href="javascript:void(0);" class="radpsTorpmin">rad/s to r/min</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="degpsTitle">
+                                <h4>Degree per second(&#176;/s) &#x25BE;</h4>
+                            </a>
+                            <ul id="dps">
+                                <li><a href="javascript:void(0);" class="dpsToradps">&#176;/s to rad/s</a></li>
+                                <li><a href="javascript:void(0);" class="dpsToradpmin">&#176;/s to rad/min</a></li>
+                                <li><a href="javascript:void(0);" class="dpsTodpmin">&#176;/s to &#176;/min</a></li>
+                                <li><a href="javascript:void(0);" class="dpsTorps">&#176;/s to r/s</a></li>
+                                <li><a href="javascript:void(0);" class="dpsTorpmin">&#176;/s to r/min</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="radpminTitle">
+                                <h4>Radian per minute(rad/min) &#x25BE;</h4>
+                            </a>
+                            <ul id="radpmin">
+                                <li><a href="javascript:void(0);" class="radpminToradps">rad/min to rad/s</a></li>
+                                <li><a href="javascript:void(0);" class="radpminTodps">rad/min to &#176;/s</a></li>
+                                <li><a href="javascript:void(0);" class="radpminTodpmin">rad/min to &#176;/min</a></li>
+                                <li><a href="javascript:void(0);" class="radpminTorps">rad/min to r/s</a></li>
+                                <li><a href="javascript:void(0);" class="radpminTorpmin">rad/min to r/min</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="degpminTitle">
+                                <h4>Degree per minute(&#176;/min) &#x25BE;</h4>
+                            </a>
+                            <ul id="dpmin">
+                                <li><a href="javascript:void(0);" class="dpminToradps">&#176;/min to rad/s</a></li>
+                                <li><a href="javascript:void(0);" class="dpminTodps">&#176;/min to &#176;/s</a></li>
+                                <li><a href="javascript:void(0);" class="dpminToradpmin">&#176;/min to rad/min</a>
+                                </li>
+                                <li><a href="javascript:void(0);" class="dpminTorps">&#176;/min to r/s</a></li>
+                                <li><a href="javascript:void(0);" class="dpminTorpmin">&#176;/min to r/min</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="rpsTitle">
+                                <h4>Revolution per second(r/s) &#x25BE;</h4>
+                            </a>
+                            <ul id="rps">
+                                <li><a href="javascript:void(0);" class="rpsToradps">r/s to rad/s</a></li>
+                                <li><a href="javascript:void(0);" class="rpsTodps">r/s to &#176;/s</a></li>
+                                <li><a href="javascript:void(0);" class="rpsToradpmin">r/s to rad/min</a></li>
+                                <li><a href="javascript:void(0);" class="rpsTodpmin">r/s to &#176;/min</a></li>
+                                <li><a href="javascript:void(0);" class="rpsTorpmin">r/s to r/min</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="rpminTitle">
+                                <h4>Revolution per minute(r/min) &#x25BE;</h4>
+                            </a>
+                            <ul id="rpmin">
+                                <li><a href="javascript:void(0);" class="rpminToradps">r/min to rad/s</a></li>
+                                <li><a href="javascript:void(0);" class="rpminTodps">r/min to &#176;/s</a></li>
+                                <li><a href="javascript:void(0);" class="rpminToradpmin">r/min to rad/min</a></li>
+                                <li><a href="javascript:void(0);" class="rpminTodpmin">r/min to &#176;/min</a></li>
+                                <li><a href="javascript:void(0);" class="rpminTorps">r/min to r/s</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="energyTitle">
+                    <h3>Energy &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="energy">
+
+                        <li><a href="javascript:void(0);" id="jTitle">
+                                <h4>Joule(J) &#x25BE;</h4>
+                            </a>
+                            <ul id="J">
+                                <li><a href="javascript:void(0);" class="JTokcal">J to kcal</a></li>
+                                <li><a href="javascript:void(0);" class="JTokJ">J to kJ</a></li>
+                                <li><a href="javascript:void(0);" class="JToWh">J to Wh</a></li>
+                                <li><a href="javascript:void(0);" class="JTokWh">J to kWh</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0);" id="kcalTitle">
+                                <h4>Kilocalorie(kcal) &#x25BE;</h4>
+                            </a>
+                            <ul id="kcal">
+                                <li><a href="javascript:void(0);" class="kcalToJ">kcal to J</a></li>
+                                <li><a href="javascript:void(0);" class="kcalTokJ">kcal to kJ</a></li>
+                                <li><a href="javascript:void(0);" class="kcalToWh">kcal to Wh</a></li>
+                                <li><a href="javascript:void(0);" class="kcalTokWh">kcal to kWh</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kJTitle">
+                                <h4>Kilojoule(kJ) &#x25BE;</h4>
+                            </a>
+                            <ul id="kJ">
+                                <li><a href="javascript:void(0);" class="kJToJ">kJ to J</a></li>
+                                <li><a href="javascript:void(0);" class="kJTokcal">kJ to kcal</a></li>
+                                <li><a href="javascript:void(0);" class="kJToWh">kJ to Wh</a></li>
+                                <li><a href="javascript:void(0);" class="kJTokWh">kJ to kWh</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="WhTitle">
+                                <h4>Watt-hour(Wh) &#x25BE;</h4>
+                            </a>
+                            <ul id="Wh">
+                                <li><a href="javascript:void(0);" class="WhToJ">Wh to J</a></li>
+                                <li><a href="javascript:void(0);" class="WhTokcal">Wh to kcal</a></li>
+                                <li><a href="javascript:void(0);" class="WhTokJ">Wh to kJ</a></li>
+                                <li><a href="javascript:void(0);" class="WhTokWh">Wh to kWh</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="kWhTitle">
+                                <h4>Kilowatt-hour(kWh) &#x25BE;</h4>
+                            </a>
+                            <ul id="kWh">
+                                <li><a href="javascript:void(0);" class="kWhToJ">kWh to J</a></li>
+                                <li><a href="javascript:void(0);" class="kWhTokcal">kWh to kcal</a></li>
+                                <li><a href="javascript:void(0);" class="kWhTokJ">kWh to kJ</a></li>
+                                <li><a href="javascript:void(0);" class="kWhToWh">kWh to Wh</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="pressureTitle">
+                    <h3>Pressure &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="pressure">
+
+                        <li><a href="javascript:void(0);" id="paTitle">
+                                <h4>Pascal(Pa) &#x25BE;</h4>
+                            </a>
+                            <ul id="pa">
+                                <li><a href="javascript:void(0);" class="paToba">Pa to ba</a></li>
+                                <li><a href="javascript:void(0);" class="paTopsi">Pa to psi</a></li>
+                                <li><a href="javascript:void(0);" class="paTotorr">Pa to Torr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="baTitle">
+                                <h4>Bar(ba) &#x25BE;</h4>
+                            </a>
+                            <ul id="ba">
+                                <li><a href="javascript:void(0);" class="baTopa">ba to Pa</a></li>
+                                <li><a href="javascript:void(0);" class="baTopsi">ba to psi</a></li>
+                                <li><a href="javascript:void(0);" class="baTotorr">ba to Torr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="psiTitle">
+                                <h4>Pound-force per sqaure inch(psi) &#x25BE;</h4>
+                            </a>
+                            <ul id="psi">
+                                <li><a href="javascript:void(0);" class="psiTopa">psi to Pa</a></li>
+                                <li><a href="javascript:void(0);" class="psiToba">psi to ba</a></li>
+                                <li><a href="javascript:void(0);" class="psiTotorr">psi to Torr</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="torrTitle">
+                                <h4>Torr &#x25BE;</h4>
+                            </a>
+                            <ul id="torr">
+                                <li><a href="javascript:void(0);" class="torrTopa">Torr to Pa</a></li>
+                                <li><a href="javascript:void(0);" class="torrToba">Torr to ba</a></li>
+                                <li><a href="javascript:void(0);" class="torrTopsi">Torr to psi</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="frequencyTitle">
+                    <h3>Frequency &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="frequency">
+
+                        <li><a href="javascript:void(0);" id="hzTitle">
+                                <h4>Hertz(Hz) &#x25BE;</h4>
+                            </a>
+                            <ul id="Hz">
+                                <li><a href="javascript:void(0);" class="HzTokHz">Hz to kHz</a></li>
+                                <li><a href="javascript:void(0);" class="HzToMHz">Hz to MHz</a></li>
+                                <li><a href="javascript:void(0);" class="HzToGHz">Hz to GHz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="khzTitle">
+                                <h4>KiloHertz(kHz) &#x25BE;</h4>
+                            </a>
+                            <ul id="kHz">
+                                <li><a href="javascript:void(0);" class="kHzToHz">kHz to Hz</a></li>
+                                <li><a href="javascript:void(0);" class="kHzToMHz">kHz to MHz</a></li>
+                                <li><a href="javascript:void(0);" class="kHzToGHz">kHz to GHz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="mhzTitle">
+                                <h4>MegaHertz(MHz) &#x25BE;</h4>
+                            </a>
+                            <ul id="MHz">
+                                <li><a href="javascript:void(0);" class="MHzToHz">MHz to Hz</a></li>
+                                <li><a href="javascript:void(0);" class="MHzTokHz">MHz to kHz</a></li>
+                                <li><a href="javascript:void(0);" class="MHzToGHz">MHz to GHz</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="ghzTitle">
+                                <h4>GigaHertz(GHz) &#x25BE;</h4>
+                            </a>
+                            <ul id="GHz">
+                                <li><a href="javascript:void(0);" class="GHzToHz">GHz to Hz</a></li>
+                                <li><a href="javascript:void(0);" class="GHzTokHz">GHz to kHz</a></li>
+                                <li><a href="javascript:void(0);" class="GHzToMHz">GHz to MHz</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="dataStorageTitle">
+                    <h3>Data Storage &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="dataStorage">
+                        <li><a href="javascript:void(0);" id="BTitle">
+                                <h4>Byte(B) &#x25BE;</h4>
+                            </a>
+                            <ul id="B">
+                                <li><a href="javascript:void(0);" class="BTobit">B to bit</a></li>
+                                <li><a href="javascript:void(0);" class="BToKB">B to KB</a></li>
+                                <li><a href="javascript:void(0);" class="BToMB">B to MB</a></li>
+                                <li><a href="javascript:void(0);" class="BToGB">B to GB</a></li>
+                                <li><a href="javascript:void(0);" class="BToTB">B to TB</a></li>
+                                <li><a href="javascript:void(0);" class="BToPB">B to PB</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="bitTitle">
+                                <h4>Bit &#x25BE;</h4>
+                            </a>
+                            <ul id="bit">
+                                <li><a href="javascript:void(0);" class="bitToB">bit to B</a></li>
+                                <li><a href="javascript:void(0);" class="bitToKB">bit to KB</a></li>
+                                <li><a href="javascript:void(0);" class="bitToMB">bit to MB</a></li>
+                                <li><a href="javascript:void(0);" class="bitToGB">bit to GB</a></li>
+                                <li><a href="javascript:void(0);" class="bitToTB">bit to TB</a></li>
+                                <li><a href="javascript:void(0);" class="bitToPB">bit to PB</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="KBTitle">
+                                <h4>Kilobyte(KB) &#x25BE;</h4>
+                            </a>
+                            <ul id="KB">
+                                <li><a href="javascript:void(0);" class="KBToB">KB to B</a></li>
+                                <li><a href="javascript:void(0);" class="KBTobit">KB to bit</a></li>
+                                <li><a href="javascript:void(0);" class="KBToMB">KB to MB</a></li>
+                                <li><a href="javascript:void(0);" class="KBToGB">KB to GB</a></li>
+                                <li><a href="javascript:void(0);" class="KBToTB">KB to TB</a></li>
+                                <li><a href="javascript:void(0);" class="KBToPB">KB to PB</a></li>
+                                </table>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="MBTitle">
+                                <h4>Megabyte(MB) &#x25BE;</h4>
+                            </a>
+                            <ul id="MB">
+                                <li><a href="javascript:void(0);" class="MBToB">MB to B</a></li>
+                                <li><a href="javascript:void(0);" class="MBTobit">MB to bit</a></li>
+                                <li><a href="javascript:void(0);" class="MBToKB">MB to KB</a></li>
+                                <li><a href="javascript:void(0);" class="MBToGB">MB to GB</a></li>
+                                <li><a href="javascript:void(0);" class="MBToTB">MB to TB</a></li>
+                                <li><a href="javascript:void(0);" class="MBToPB">MB to PB</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="GBTitle">
+                                <h4>Gigabyte(GB) &#x25BE;</h4>
+                            </a>
+                            <ul id="GB">
+                                <li><a href="javascript:void(0);" class="GBToB">GB to B</a></li>
+                                <li><a href="javascript:void(0);" class="GBTobit">GB to bit</a></li>
+                                <li><a href="javascript:void(0);" class="GBToKB">GB to KB</a></li>
+                                <li><a href="javascript:void(0);" class="GBToMB">GB to MB</a></li>
+                                <li><a href="javascript:void(0);" class="GBToTB">GB to TB</a></li>
+                                <li><a href="javascript:void(0);" class="GBToPB">GB to PB</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="TBTitle">
+                                <h4>Terabyte(TB) &#x25BE;</h4>
+                            </a>
+                            <ul id="TB">
+                                <li><a href="javascript:void(0);" class="TBToB">TB to B</a></li>
+                                <li><a href="javascript:void(0);" class="TBTobit">TB to bit</a></li>
+                                <li><a href="javascript:void(0);" class="TBToKB">TB to KB</a></li>
+                                <li><a href="javascript:void(0);" class="TBToMB">TB to MB</a></li>
+                                <li><a href="javascript:void(0);" class="TBToGB">TB to GB</a></li>
+                                <li><a href="javascript:void(0);" class="TBToPB">TB to PB</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="PBTitle">
+                                <h4>Petabyte(PB) &#x25BE;</h4>
+                            </a>
+                            <ul id="PB">
+                                <li><a href="javascript:void(0);" class="PBToB">PB to B</a></li>
+                                <li><a href="javascript:void(0);" class="PBTobit">PB to bit</a></li>
+                                <li><a href="javascript:void(0);" class="PBToKB">PB to KB</a></li>
+                                <li><a href="javascript:void(0);" class="PBToMB">PB to MB</a></li>
+                                <li><a href="javascript:void(0);" class="PBToGB">PB to GB</a></li>
+                                <li><a href="javascript:void(0);" class="PBToTB">PB to TB</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" id="dataTransferRateTitle">
+                    <h3>Data Transfer Rate &#x25BE;</h3>
+                </a>
+                <div>
+                    <ul class="dataTransferRate">
+
+                        <li><a href="javascript:void(0);" id="bpsTitle">
+                                <h4>Bits per second(bps) &#x25BE;</h4>
+                            </a>
+                            <ul id="bps">
+                                <li><a href="javascript:void(0);" class="bpsToKBps">bps to KBps</a></li>
+                                <li><a href="javascript:void(0);" class="bpsToMBps">bps to MBps</a></li>
+                                <li><a href="javascript:void(0);" class="bpsToGBps">bps to GBps</a></li>
+                                <li><a href="javascript:void(0);" class="bpsToTBps">bps to TBps</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="KBpsTitle">
+                                <h4>Kilobytes per second(KBps) &#x25BE;</h4>
+                            </a>
+                            <ul id="KBps">
+                                <li><a href="javascript:void(0);" class="KBpsTobps">KBps to bps</a></li>
+                                <li><a href="javascript:void(0);" class="KBpsToMBps">KBps to MBps</a></li>
+                                <li><a href="javascript:void(0);" class="KBpsToGBps">KBps to GBps</a></li>
+                                <li><a href="javascript:void(0);" class="KBpsToTBps">KBps to TBps</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="MBpsTitle">
+                                <h4>Megabytes per second(MBps) &#x25BE;</h4>
+                            </a>
+                            <ul id="MBps">
+                                <li><a href="javascript:void(0);" class="MBpsTobps">MBps to bps</a></li>
+                                <li><a href="javascript:void(0);" class="MBpsToKBps">MBps to KBps</a></li>
+                                <li><a href="javascript:void(0);" class="MBpsToGBps">MBps to GBps</a></li>
+                                <li><a href="javascript:void(0);" class="MBpsToTBps">MBps to TBps</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="GBpsTitle">
+                                <h4>Gigabytes per second(GBps) &#x25BE;</h4>
+                            </a>
+                            <ul id="GBps">
+                                <li><a href="javascript:void(0);" class="GBpsTobps">GBps to bps</a></li>
+                                <li><a href="javascript:void(0);" class="GBpsToKBps">GBps to KBps</a></li>
+                                <li><a href="javascript:void(0);" class="GBpsToMBps">GBps to MBps</a></li>
+                                <li><a href="javascript:void(0);" class="GBpsToTBps">GBps to TBps</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript:void(0);" id="TBpsTitle">
+                                <h4>Terabyte per second(TBps) &#x25BE;</h4>
+                            </a>
+                            <ul id="TBps">
+                                <li><a href="javascript:void(0);" class="TBpsTobps">TBps to bps</a></li>
+                                <li><a href="javascript:void(0);" class="TBpsToKBps">TBps to KBps</a></li>
+                                <li><a href="javascript:void(0);" class="TBpsToMBps">TBps to MBps</a></li>
+                                <li><a href="javascript:void(0);" class="TBpsToGBps">TBps to GBps</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Scrolling sidebar with fixed content -->
+            </div>
+
+        </div>
+        <div class="wrapper2">
+            <div id="beginScreen" style="display: block;">
+                <p>Please select a conversion to begin</p>
+            </div>
+            <div id="wrapper3" style="display: none;">
+                <div id="input">
+                    <input type="number" id="input1"><label for="" id="label1"></label> <svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
+                    </svg> <input type="number" name="" id="input2"><label for="" id="label2"></label> <br> <br>
+                    <!-- <button id="convertBtn">Convert</button> -->
+                    <h4>Formula: </h4>
+                    <p id="formula"> </p>
+                    <button id="clear">Clear</button>
+                </div>
+                <div id="history">
+                    <h3>Past Conversions:</h3>
+                    <div id="historyList">
+                        <ul class="ulList">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- <script type="module" src="conversions.json"></script> -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
